@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Intro Overlay to force interaction for music -->
+    <div id="intro-overlay">
+        Tap to Open ❤️
+    </div>
+
+    <div class="container">
+        <!-- 
+            🎵 BACKGROUND MUSIC SETUP 🎵
+            Replace the 'src' attribute below with your music file link.
+            Example: src="./assets/mysong.mp3" or a URL.
+        -->
+        <audio id="bgMusic" loop autoplay>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Slide 1: Intro -->
+        <div class="slide active" id="slide1">
+            <img src="./assets/cilukba.gif" alt="Peek-a-boo" class="gif">
+            <h1>Hi Sanju! 👋</h1>
+            <p>I have a surprise for you...</p>
+            <button class="btn next-btn" onclick="nextSlide(2)">What is it?</button>
+        </div>
+
+        <!-- Slide 2: Buildup -->
+        <div class="slide" id="slide2">
+            <img src="./assets/mikir.gif" alt="Thinking" class="gif">
+            <h1>I've been thinking...</h1>
+            <p>And I want to ask you something very important.</p>
+            <button class="btn next-btn" onclick="nextSlide(3)">Ask away!</button>
+        </div>
+
+        <!-- Slide 3: The Question -->
+        <div class="slide" id="slide3">
+            <img src="./assets/pandapanah.gif" alt="Cupid" class="gif">
+            <h1>Will you be my Valentine, Sanju? 🌹</h1>
+            <div class="buttons">
+                <button class="btn yes-btn" onclick="nextSlide(4)">Yes! ❤️</button>
+                <button class="btn no-btn" id="noBtn" onmouseover="moveButton()">No 💔</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Success -->
+        <div class="slide" id="slide4">
+            <img src="./assets/hearthappy.gif" alt="Happy Heart" class="gif">
+            <h1>Yay! I Love You! ❤️</h1>
+            <p>Happy Valentine's Day!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
